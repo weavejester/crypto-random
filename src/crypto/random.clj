@@ -3,7 +3,7 @@
   (:refer-clojure :exclude [bytes])
   (:require [clojure.string :as string])
   (:import java.security.SecureRandom
-           [org.apache.commons.codec.binary Base64 Hex]))
+           [org.apache.commons.codec.binary Base64 Base32 Hex]))
 
 (defn bytes
   "Returns a random byte array of the specified size."
@@ -16,6 +16,11 @@
   "Return a random base64 string of the specified size in bytes."
   [size]
   (String. (Base64/encodeBase64 (bytes size))))
+
+(defn base32
+  "Return a random base32 string of the specified size in bytes."
+  [size]
+  (.encodeAsString (Base32.) (bytes size)))
 
 (defn hex
   "Return a random hex string of the specified size in bytes."
