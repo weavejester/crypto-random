@@ -19,6 +19,10 @@ Returns a random byte array of the specified size.
 
 Return a random base64 string of the specified size in bytes.
 
+### `(crypto.random/base32 size)`
+
+Return a random base32 string of the specified size in bytes.
+
 ### `(crypto.random/hex size)`
 
 Return a random hex string of the specified size in bytes.
