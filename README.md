@@ -7,7 +7,7 @@ bytes and strings.
 
 Add the following dependency to your `project.clj` file:
 
-    [crypto-random "1.0.0"]
+    [crypto-random "1.1.0"]
 
 ## Functions
 
