@@ -34,6 +34,6 @@ denotes the number of bytes to generate.
 
 ## License
 
-Copyright (C) 2011 James Reeves
+Copyright (C) 2013 James Reeves
 
 Distributed under the Eclipse Public License, the same as Clojure.
