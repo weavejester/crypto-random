@@ -2,14 +2,16 @@
   "Cryptographically secure random numbers and strings."
   (:refer-clojure :exclude [bytes])
   (:require [clojure.string :as string])
-  (:import java.security.SecureRandom
+  (:import java.io.FileInputStream
            [org.apache.commons.codec.binary Base64 Base32 Hex]))
 
 (defn bytes
   "Returns a random byte array of the specified size."
   [size]
-  (let [seed (byte-array size)]
-    (.nextBytes (SecureRandom/getInstance "SHA1PRNG") seed)
+  (let [seed (byte-array size)
+        stream (FileInputStream. "/dev/urandom")]
+    (.read stream seed)
+    (.close stream)
     seed))
 
 (defn base64
