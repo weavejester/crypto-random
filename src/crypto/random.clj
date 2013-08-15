@@ -11,6 +11,7 @@
   (let [seed (byte-array size)
         stream (FileInputStream. "/dev/urandom")]
     (.read stream seed)
+    (.close stream)
     seed))
 
 (defn base64
