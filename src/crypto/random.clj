@@ -2,8 +2,7 @@
   "Cryptographically secure random numbers and strings."
   (:refer-clojure :exclude [bytes])
   (:require [clojure.string :as string])
-  (:import java.security.SecureRandom
-           java.io.FileInputStream
+  (:import java.io.FileInputStream
            [org.apache.commons.codec.binary Base64 Base32 Hex]))
 
 (defn bytes
