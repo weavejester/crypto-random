@@ -31,7 +31,4 @@
   "Return a random string suitable for being inserted into URLs. The size
   denotes the number of bytes to generate."
   [size]
-  (-> (base64 size)
-      (string/replace "+" "-")
-      (string/replace "/" "_")
-      (string/replace "=" "")))
+  (String. (Base64/encodeBase64URLSafeString (bytes size))))
