@@ -32,6 +32,10 @@ Return a random hex string of the specified size in bytes.
 Return a random string suitable for being inserted into URLs. The size
 denotes the number of bytes to generate.
 
+### `(crypto.random/trytes size)`
+
+Return a random tryte of the specified size. 
+
 ## License
 
 Copyright © 2014 James Reeves

@@ -35,3 +35,8 @@
       (string/replace "+" "-")
       (string/replace "/" "_")
       (string/replace "=" "")))
+
+(defn trytes
+  [size]
+  (let [tryte-alphabet  "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+    (apply str (take size (repeatedly #(.charAt tryte-alphabet (.nextInt (SecureRandom.) 27)))))))
