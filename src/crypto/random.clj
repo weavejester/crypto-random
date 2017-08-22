@@ -38,6 +38,5 @@
 
 (defn trytes
   [size]
-  (let [tryte-alphabet  "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        sr (SecureRandom.)]
-    (apply str (take size (repeatedly #(.charAt tryte-alphabet (.nextInt sr 27)))))))
+  (let [tryte-alphabet  "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+    (apply str (take size (repeatedly #(.charAt tryte-alphabet (.nextInt (SecureRandom.) 27)))))))
