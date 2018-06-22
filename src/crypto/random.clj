@@ -25,7 +25,7 @@
 (defn hex
   "Return a random hex string of the specified size in bytes."
   [size]
-  (String. (Hex/encodeHex (bytes size))))
+  (String. (Hex/encodeHex ^bytes (bytes size))))
 
 (defn url-part
   "Return a random string suitable for being inserted into URLs. The size
